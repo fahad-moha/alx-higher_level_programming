@@ -2,7 +2,8 @@
 """
 Contains the lookup function
 
-This module provides the lookup function, which returns a list of available attributes and methods of an object.
+This module provides the lookup function, which returns a list\
+    of available attributes and methods of an object.
 """
 
 
