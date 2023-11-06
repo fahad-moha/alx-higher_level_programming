@@ -1,24 +1,30 @@
 #!/usr/bin/python3
 
-def add_attribute(obj, attr_name, attr_value):
+class MyInt(int):
     """
-    Adds a new attribute to an object if possible.
-
-    Args:
-        obj: The object to add the attribute to.
-        attr_name: The name of the attribute.
-        attr_value: The value of the attribute.
-
-    Raises:
-        TypeError: If the object can't have a new attribute.
-
-    Example:
-        >>> my_obj = {}
-        >>> add_attribute(my_obj, "name", "John")
-        >>> print(my_obj.name)
-        John
+    A custom integer class that inherits from the built-in int class.
     """
-    if hasattr(obj, attr_name):
-        raise TypeError("can't add new attribute")
-    else:
-        setattr(obj, attr_name, attr_value)
+
+    def __eq__(self, other):
+        """
+        Overrides the equality operator (==) to invert its behavior.
+
+        Args:
+            other: The object to compare the MyInt instance with.
+
+        Returns:
+            True if the values are not equal, False otherwise.
+        """
+        return super().__ne__(other)
+
+    def __ne__(self, other):
+        """
+        Overrides the inequality operator (!=) to invert its behavior.
+
+        Args:
+            other: The object to compare the MyInt instance with.
+
+        Returns:
+            True if the values are equal, False otherwise.
+        """
+        return super().__eq__(other)
