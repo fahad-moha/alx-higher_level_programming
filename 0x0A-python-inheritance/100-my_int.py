@@ -1,30 +1,19 @@
 #!/usr/bin/python3
+"""
+Contains the class MyInt
+"""
+
 
 class MyInt(int):
-    """
-    A custom integer class that inherits from the built-in int class.
-    """
+    """rebel version of an integer, perfect for opposite day!"""
+    def __new__(cls, *args, **kwargs):
+        """create a new instance of the class"""
+        return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
     def __eq__(self, other):
-        """
-        Overrides the equality operator (==) to invert its behavior.
-
-        Args:
-            other: The object to compare the MyInt instance with.
-
-        Returns:
-            True if the values are not equal, False otherwise.
-        """
-        return super().__ne__(other)
+        """what was != is now =="""
+        return int(self) != other
 
     def __ne__(self, other):
-        """
-        Overrides the inequality operator (!=) to invert its behavior.
-
-        Args:
-            other: The object to compare the MyInt instance with.
-
-        Returns:
-            True if the values are equal, False otherwise.
-        """
-        return super().__eq__(other)
+        """what was == is now !="""
+        return int(self) == other
