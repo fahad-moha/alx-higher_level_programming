@@ -11,7 +11,7 @@ class Square(Rectangle):
         Args:
             size (int): The size of the fresh Square.
             x (int): The x coordinate of the fresh Square.
-            y (int): The y coordinate of the new Square.
+            y (int): The y coordinate of the fresh Square.
             id (int): The identity of the new Square.
         """
         super().__init__(size, size, x, y, id)
