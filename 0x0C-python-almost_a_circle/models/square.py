@@ -10,7 +10,7 @@ class Square(Rectangle):
         """Initialize a new Square.
         Args:
             size (int): The size of the fresh Square.
-            x (int): The x coordinate of the new Square.
+            x (int): The x coordinate of the fresh Square.
             y (int): The y coordinate of the new Square.
             id (int): The identity of the new Square.
         """
