@@ -17,7 +17,7 @@ class Base:
     def __init__(self, id=None):
         """Initialize a new Base.
         Args:
-            id (int): The identity of the new Base.
+            id (int): The identity of the fresh Base.
         """
         if id is not None:
             self.id = id
